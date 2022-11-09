@@ -1,0 +1,20 @@
+{
+  "name": "functions",
+  "private": true,
+  "engines": {
+    "node": "16"
+  },
+  "main": "./src/main.ts",
+  "type": "module",
+  "scripts": {
+    "run:main": "node --loader ts-node/esm ./src/main.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "firebase": "^9.13.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  }
+}
