@@ -10,9 +10,10 @@ const app = initializeApp(config)
 
 const db = getFirestore(app)
 
-const unsub = onSnapshot(doc(db, 'snapshotTest', 'FqP7m3CXI8bzCWC1yXEg'), { includeMetadataChanges: true }, (doc) => {
+const docRef = doc(db, 'snapshotTest', 'FqP7m3CXI8bzCWC1yXEg')
+
+onSnapshot(docRef, { includeMetadataChanges: true }, (doc) => {
   console.log("Current data: ", doc.data())
-},
-(error) => {
-  console.error(error)
+},(err) => {
+  console.error(err)
 })
